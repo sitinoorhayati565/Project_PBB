@@ -9,12 +9,19 @@ class LandingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_landing)
 
-        val btnGetStarted = findViewById<Button>(R.id.btnGetStarted)
+        findViewById<Button>(R.id.btnStart)
+            .setOnClickListener {
 
-        btnGetStarted.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
+                startActivity(
+                    Intent(
+                        this,
+                        SignInActivity::class.java
+                    )
+                )
+
+            }
     }
 }

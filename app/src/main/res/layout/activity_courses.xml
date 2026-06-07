@@ -1,91 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FDF7FF">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottomNav">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📚 Semua Kursus"
+            android:textColor="#674BB5"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih kursus yang ingin dipelajari"/>
+
+        <!-- BANNER -->
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_courses_banner"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="24dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="📚 Semua Kursus"
-                android:textColor="#674BB5"
+                android:text="Belajar Hari Ini"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="4 Kursus Tersedia"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pilih kursus yang ingin dipelajari"/>
+                android:layout_marginTop="6dp"
+                android:text="Mulai dari Grammar untuk membangun dasar Bahasa Inggris."
+                android:textColor="#FFFFFF"/>
 
-            <!-- Banner -->
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_primary"
+                android:text="Mulai Belajar"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <!-- GRAMMAR -->
+
+        <LinearLayout
+            android:id="@+id/cardGrammar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_course_item"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/bg_courses_banner"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Belajar Hari Ini"
-                    android:textColor="#FFFFFF"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="4 Kursus Tersedia"
-                    android:textColor="#FFFFFF"
-                    android:textSize="30sp"
+                    android:layout_weight="1"
+                    android:text="📖 Grammar"
+                    android:textSize="22sp"
                     android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mulai dari Grammar untuk membangun dasar Bahasa Inggris."
-                    android:textColor="#FFFFFF"/>
+                    android:text="Lv.1"
+                    android:textColor="#674BB5"
+                    android:textStyle="bold"/>
 
-                <Button
-                    android:id="@+id/btnStartLearning"
-                    android:layout_width="170dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Mulai Belajar"/>
             </LinearLayout>
 
-            <include layout="@layout/item_grammar"/>
-            <include layout="@layout/item_vocabulary"/>
-            <include layout="@layout/item_speaking"/>
-            <include layout="@layout/item_listening"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belajar struktur kalimat Bahasa Inggris"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Progress 0%"
+                android:textColor="#674BB5"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="6dp"
+                android:max="100"
+                android:progress="0"/>
 
         </LinearLayout>
 
-    </ScrollView>
+        <!-- VOCABULARY -->
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/bg_bottom_nav"
-        app:itemIconTint="#674BB5"
-        app:itemTextColor="#494552"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu"/>
+        <LinearLayout
+            android:id="@+id/cardVocabulary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_course_item"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-</RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🌍 Vocabulary"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lv.1"
+                    android:textColor="#674BB5"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menambah kosakata Bahasa Inggris"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Progress 0%"
+                android:textColor="#674BB5"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="6dp"
+                android:max="100"
+                android:progress="0"/>
+
+        </LinearLayout>
+
+        <!-- SPEAKING -->
+
+        <LinearLayout
+            android:id="@+id/cardSpeaking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_course_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎤 Speaking"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latihan berbicara Bahasa Inggris"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Progress 0%"
+                android:textColor="#674BB5"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="6dp"
+                android:max="100"
+                android:progress="0"/>
+
+        </LinearLayout>
+
+        <!-- LISTENING -->
+
+        <LinearLayout
+            android:id="@+id/cardListening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_course_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎧 Listening"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belajar memahami percakapan"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Progress 0%"
+                android:textColor="#674BB5"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="6dp"
+                android:max="100"
+                android:progress="0"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

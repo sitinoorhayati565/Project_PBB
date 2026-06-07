@@ -12,6 +12,9 @@ class CoursesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_courses)
 
         val grammar = findViewById<LinearLayout>(R.id.cardGrammar)
+        val vocabulary = findViewById<LinearLayout>(R.id.cardVocabulary)
+        val speaking = findViewById<LinearLayout>(R.id.cardSpeaking)
+        val listening = findViewById<LinearLayout>(R.id.cardListening)
 
         grammar.setOnClickListener {
 

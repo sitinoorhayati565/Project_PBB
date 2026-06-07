@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF7FF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎉 Quiz Selesai"
+        android:textColor="#7C4DFF"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Nilai Kamu"
+        android:textColor="#666666"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="100"
+        android:textColor="#333333"
+        android:textSize="56sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="⭐⭐⭐⭐⭐"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Hebat!\nKamu telah menyelesaikan Grammar Level 1"
+        android:textAlignment="center"
+        android:textColor="#555555"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnBackCourse"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#7C4DFF"
+        android:text="Kembali ke Kursus"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+</LinearLayout>

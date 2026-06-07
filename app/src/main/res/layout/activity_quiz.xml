@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF7FF"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/txtQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soal 1/5"
+        android:textColor="#7C4DFF"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <ProgressBar
+        android:id="@+id/progressQuiz"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="10dp"
+        android:max="5"
+        android:progress="1"
+        android:progressTint="#7C4DFF"/>
+
+    <TextView
+        android:id="@+id/txtQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="What is the pronoun in this sentence? 'She likes English.'"
+        android:textColor="#333333"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/rbA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Likes"/>
+
+        <RadioButton
+            android:id="@+id/rbB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English"/>
+
+        <RadioButton
+            android:id="@+id/rbC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="She"/>
+
+        <RadioButton
+            android:id="@+id/rbD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Is"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#7C4DFF"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

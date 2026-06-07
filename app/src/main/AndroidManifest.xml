@@ -30,7 +30,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".SignUpActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -38,15 +38,11 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SignUpActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
             android:name=".LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".CourseActivity"
+            android:name=".CoursesActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -58,7 +54,27 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".CoursesActivity"
+            android:name=".LessonActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Lesson2Activity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Lesson3Activity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Lesson4Activity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ResultActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
